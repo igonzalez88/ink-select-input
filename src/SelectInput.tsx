@@ -98,7 +98,7 @@ function SelectInput<V>({
 	useInput(
 		useCallback(
 			(input, key) => {
-				if (input === 'k' || key.upArrow) {
+				if (key.upArrow) {
 					const lastIndex = (hasLimit ? limit : items.length) - 1;
 					const atFirstIndex = selectedIndex === 0;
 					const nextIndex = hasLimit ? selectedIndex : lastIndex;
@@ -119,7 +119,7 @@ function SelectInput<V>({
 					}
 				}
 
-				if (input === 'j' || key.downArrow) {
+				if (key.downArrow) {
 					const atLastIndex =
 						selectedIndex === (hasLimit ? limit : items.length) - 1;
 					const nextIndex = hasLimit ? selectedIndex : 0;
