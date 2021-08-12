@@ -97,7 +97,7 @@ function SelectInput<V>({
 
 	useInput(
 		useCallback(
-			(input, key) => {
+			(_, key) => {
 				if (key.upArrow) {
 					const lastIndex = (hasLimit ? limit : items.length) - 1;
 					const atFirstIndex = selectedIndex === 0;
